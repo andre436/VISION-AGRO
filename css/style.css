@@ -1,0 +1,252 @@
+/* Barra de navegação vertical */
+.navbar {
+    width: 250px; /* Largura da barra de navegação */
+    position: fixed; /* Fixa a barra na lateral */
+    top: 0;
+    left: 0;
+    height: 100%; /* Preenche toda a altura da tela */
+    background-color: #343a40;
+    z-index: 1000;
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navbar-nav {
+    margin-top: 30px; /* Espaço no topo */
+    width: 100%;
+}
+
+.navbar .navbar-nav .nav-item {
+    width: 100%; /* Ocupa toda a largura */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fff;
+    padding: 12px 20px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    background-color: #495057;
+    text-decoration: none;
+}
+
+.logo-navbar {
+    max-width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Conteúdo principal ajustado para que não fique atrás da barra lateral */
+.content {
+    margin-left: 260px; /* Desloca o conteúdo para a direita para dar espaço para a navbar */
+    padding: 20px; /* Adiciona algum padding para o conteúdo */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e9d900;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+/* Estilo para as cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .card-body {
+    padding: 20px;
+}
+
+.card img {
+    border-bottom: 1px solid #ddd;
+}
+
+.hover-effect:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.video-thumbnail {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-thumbnail .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.text-warning {
+    color: #034b03 !important;
+}
+
+/* Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    background-color: #495057;
+}
+
+.logo-navbar {
+    max-width: 150px;
+    margin: 20px auto;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #495057;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-bottom: 2px solid #e9ecef;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.hover-effect {
+    transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+.form-group input,
+.form-group textarea {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Custom Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .navbar .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
