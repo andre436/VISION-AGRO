@@ -221,32 +221,6 @@ footer a:hover {
 
 /* Custom Media Queries */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .card-title {
-        font-size: 1rem;
-    }
-
-    .card-text {
-        font-size: 0.9rem;
-    }
-
-    .navbar .navbar-nav {
-        text-align: center;
-    }
-
-    .navbar .navbar-nav .nav-item {
-        margin-bottom: 10px;
-    }
-
-    .content {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    /* Navbar vertical para telas pequenas */
     .navbar {
         width: 100%;
         height: auto;
@@ -259,18 +233,44 @@ footer a:hover {
         justify-content: center;
     }
 
+    .navbar .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
     .navbar .navbar-nav .nav-link {
         padding: 10px 15px;
     }
 
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    /* Ajustando o conteúdo para não ficar atrás da navbar */
+    .content {
+        margin-left: 0;
+    }
+
+    /* Hero Section */
     .hero {
         padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
     }
 
     .card-body {
         padding: 15px;
     }
 
+    /* Ajustando o tamanho dos cards */
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustando a imagem e vídeo */
     .video-thumbnail img {
         max-width: 100%;
     }
