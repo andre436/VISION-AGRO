@@ -102,10 +102,6 @@
     padding: 10px;
 }
 
-.text-warning {
-    color: #034b03 !important;
-}
-
 /* Geral */
 body {
     font-family: 'Arial', sans-serif;
@@ -248,5 +244,61 @@ footer a:hover {
     .content {
         margin-left: 0;
         padding: 10px;
+    }
+
+    /* Navbar vertical para telas pequenas */
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 10px 15px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .video-thumbnail img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .card-title {
+        font-size: 0.9rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        margin-bottom: 8px;
+    }
+
+    .content {
+        padding: 5px;
     }
 }
