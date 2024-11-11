@@ -1,4 +1,4 @@
-/* Barra de navegação vertical */
+/* Barra de navegação */
 .navbar {
     width: 250px; /* Largura da barra de navegação */
     position: fixed; /* Fixa a barra na lateral */
@@ -8,6 +8,7 @@
     background-color: #343a40;
     z-index: 1000;
     box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Transição suave */
 }
 
 .navbar .navbar-nav {
@@ -16,7 +17,7 @@
 }
 
 .navbar .navbar-nav .nav-item {
-    width: 100%; /* Ocupa toda a largura */
+    width: 100%;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -37,10 +38,11 @@
     display: block;
 }
 
-/* Conteúdo principal ajustado para que não fique atrás da barra lateral */
+/* Conteúdo principal */
 .content {
-    margin-left: 260px; /* Desloca o conteúdo para a direita para dar espaço para a navbar */
+    margin-left: 250px; /* Desloca o conteúdo para a direita para dar espaço para a navbar */
     padding: 20px; /* Adiciona algum padding para o conteúdo */
+    transition: margin-left 0.3s ease; /* Transição suave ao modificar a largura da navbar */
 }
 
 /* Hero Section */
@@ -59,47 +61,30 @@
     padding: 15px 30px;
 }
 
-/* Estilo para as cards */
+/* Ajustando cards */
 .card {
     border: none;
     border-radius: 10px;
     overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card .card-body {
+.card-body {
     padding: 20px;
 }
 
-.card img {
-    border-bottom: 1px solid #ddd;
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
-.hover-effect:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
+.card-text {
+    font-size: 1rem;
 }
 
-.video-thumbnail {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.video-thumbnail img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.video-thumbnail .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 10px;
+.card:hover {
+    transform: scale(1.05);
 }
 
 /* Geral */
@@ -123,72 +108,6 @@ body {
     background-color: #495057;
 }
 
-.logo-navbar {
-    max-width: 150px;
-    margin: 20px auto;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #495057;
-    padding: 80px 0;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.hero .btn {
-    font-size: 1.2rem;
-    padding: 15px 30px;
-}
-
-/* Cards */
-.card {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-top {
-    border-bottom: 2px solid #e9ecef;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 1rem;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.hover-effect {
-    transition: all 0.3s ease;
-}
-
-.hover-effect:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Section Titles */
-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
 /* Footer */
 footer {
     background-color: #343a40;
@@ -206,30 +125,18 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Forms */
-.form-group input,
-.form-group textarea {
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-    padding: 10px;
-    width: 100%;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
 /* Custom Media Queries */
 @media (max-width: 768px) {
+    /* Navbar */
     .navbar {
-        width: 100%;
-        height: auto;
-        position: relative;
+        width: 100%; /* A largura da navbar será 100% no mobile */
+        position: relative; /* Muda a posição para relativa no mobile */
+        height: auto; /* Não precisa ocupar 100% de altura */
         box-shadow: none;
     }
 
     .navbar .navbar-nav {
-        flex-direction: row;
+        flex-direction: row; /* Organiza os itens horizontalmente */
         justify-content: center;
     }
 
@@ -237,21 +144,11 @@ footer a:hover {
         margin-bottom: 10px;
     }
 
-    .navbar .navbar-nav .nav-link {
-        padding: 10px 15px;
-    }
-
     .content {
-        margin-left: 0;
+        margin-left: 0; /* Remove a margem lateral que cria o espaço para a navbar */
         padding: 10px;
     }
 
-    /* Ajustando o conteúdo para não ficar atrás da navbar */
-    .content {
-        margin-left: 0;
-    }
-
-    /* Hero Section */
     .hero {
         padding: 60px 0;
     }
@@ -264,18 +161,13 @@ footer a:hover {
         padding: 15px;
     }
 
-    /* Ajustando o tamanho dos cards */
     .card {
         width: 100%;
         margin-bottom: 20px;
     }
-
-    /* Ajustando a imagem e vídeo */
-    .video-thumbnail img {
-        max-width: 100%;
-    }
 }
 
+/* Para telas menores que 576px */
 @media (max-width: 576px) {
     .hero h1 {
         font-size: 1.5rem;
