@@ -47,8 +47,12 @@
 
 /* Hero Section */
 .hero {
-    background-color: #e9d900;
+    background-image: url('https://github.com/andre436/VISION-AGRO/blob/main/fundo.png?raw=true'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a área da seção */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
     padding: 80px 0;
+    color: #fff; /* Cor do texto para melhorar contraste */
 }
 
 .hero h1 {
