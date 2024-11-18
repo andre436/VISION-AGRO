@@ -47,7 +47,7 @@
 
 /* Hero Section */
 .hero {
-    background-image: url('https://github.com/andre436/VISION-AGRO/blob/main/fundo.png?raw=true'); /* Caminho para a imagem de fundo */
+    background-image: url('https://github.com/andre436/VISION-AGRO/blob/main/fundo.png.jpg?raw=true'); /* Caminho para a imagem de fundo */
     background-size: cover; /* A imagem cobre toda a área da seção */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
